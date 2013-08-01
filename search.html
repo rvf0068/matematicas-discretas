@@ -9,7 +9,7 @@
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content=" Archivo del blog Entradas recientes ">
+  <meta name="description" content="Search Results $('#search_results').tapir({ 'token': '', 'complete' : function() { document.getElementById('search_loading').style.display="none &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rvf0068.github.io/matematicas-discretas/">
+  <link rel="canonical" href="http://rvf0068.github.io/matematicas-discretas/search.html">
   <link href="/matematicas-discretas/favicon.png" rel="icon">
   <link href="/matematicas-discretas/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/matematicas-discretas/javascripts/modernizr-2.0.js"></script>
@@ -66,30 +66,22 @@
   <div id="body"  >
     <div id="main">
       <div id="content">
-        <div class="blog-index">
-  
-  
-  <div class="pagination">
-    
-    <a href="/matematicas-discretas/blog/archives">Archivo del blog</a>
-    
-  </div>
+        <h1 class="entry-title"><center>Search Results</center></h1>
+<div id="search_loading" style="margin: 40px 0">
+    <center><img src="/matematicas-discretas/images/loading.gif"></center>
 </div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Entradas recientes</h1>
-  <ul id="recent_posts">
-    
-  </ul>
-</section>
 
+<script type="text/javascript" src="/matematicas-discretas/javascripts/jquery-tapir.js"></script>
+<div id="search_results" style="display:none">
+<br>
+</div>
+<script>
+         $('#search_results').tapir({
+             'token': '',
+             'complete' : function() { document.getElementById('search_loading').style.display="none"; }
+         });
+</script>
 
-
-
-
-  
-</aside>
 
       </div>
     </div>
