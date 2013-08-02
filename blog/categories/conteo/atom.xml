@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Matemáticas Discretas]]></title>
-  <link href="http://rvf0068.github.io/matematicas-discretas/atom.xml" rel="self"/>
+  <title><![CDATA[Category: conteo | Matemáticas Discretas]]></title>
+  <link href="http://rvf0068.github.io/matematicas-discretas/blog/categories/conteo/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/matematicas-discretas/"/>
   <updated>2013-08-02T14:21:31-05:00</updated>
   <id>http://rvf0068.github.io/matematicas-discretas/</id>
@@ -24,7 +24,7 @@
   primero que los colores se pueden repetir y luego que no). Repetir
   las preguntas suponiendo que el rojo tiene que ser uno de los
   colores escogidos.</li>
-  <li>¿En cuántas de las $6!$ &#8220;palabras’’ de 6 letras distintas que
+  <li>¿En cuántas de las $6!$ ``palabras’’ de 6 letras distintas que
   se pueden formar con las letras ABCDEF se tiene que la A aparece
   junto a la D?</li>
   <li>¿Cuántos números enteros entre 1000 y 9999 no tienen dígitos
