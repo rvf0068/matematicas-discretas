@@ -17,3 +17,6 @@ group :development do
 end
 
 gem 'sinatra', '~> 1.4.2'
+gem 'bibtex-ruby'
+gem 'citeproc-ruby'
+gem 'kramdown'

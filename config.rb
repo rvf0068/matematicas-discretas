@@ -4,11 +4,11 @@ require 'sass-globbing'
 project_type = :stand_alone
 
 # Publishing paths
-http_path = "/"
-http_images_path = "/images"
+http_path = "/matematicas-discretas/"
+http_images_path = "/matematicas-discretas/images"
 http_generated_images_path = "/images"
-http_fonts_path = "/fonts"
-css_dir = "public/stylesheets"
+http_fonts_path = "/matematicas-discretas/fonts"
+css_dir = "public/matematicas-discretas/stylesheets"
 
 # Local development paths
 sass_dir = "sass"

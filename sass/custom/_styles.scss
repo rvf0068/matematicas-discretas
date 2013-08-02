@@ -1,0 +1,50 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+
+.theorem {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.theorem:before {
+    content: "Teorema.";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.lemma {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.lemma:before {
+    content: "Lema.";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.proof {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.proof:before {
+    content: "Demostración.";
+    font-style: italic;
+}
+.proof:after {
+    content: "\25FC";
+    float:right;
+}
+
+.definition {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.definition:before {
+    content: "Definición.";
+    font-weight: bold;
+    font-style: normal;
+}
