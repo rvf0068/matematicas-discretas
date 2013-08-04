@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conteo | Matemáticas Discretas]]></title>
   <link href="http://rvf0068.github.io/matematicas-discretas/blog/categories/conteo/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/matematicas-discretas/"/>
-  <updated>2013-08-02T14:27:55-05:00</updated>
+  <updated>2013-08-04T17:12:28-05:00</updated>
   <id>http://rvf0068.github.io/matematicas-discretas/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -45,6 +45,113 @@
   <li>¿En cuántas sucesiones de ocho volados se obtienen
   exactamente cinco águilas y tres soles?</li>
 </ol>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reglas fundamentales de conteo]]></title>
+    <link href="http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/reglas-fundamentales-de-conteo/"/>
+    <updated>2013-07-31T16:29:00-05:00</updated>
+    <id>http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/reglas-fundamentales-de-conteo</id>
+    <content type="html"><![CDATA[<p>La forma más sencilla de la técnica fundamental de conteo dice:</p>
+
+<dl>
+  <dt><strong>Regla 1</strong></dt>
+  <dd>Si $A$ y $B$ son conjuntos finitos y $A\cap B=\emptyset$,
+entonces:</dd>
+</dl>
+
+<script type="math/tex; mode=display">
+|A\cup B|=|A|+|B|
+</script>
+
+<p>Por ejemplo, en un conjunto donde hay 5 mujeres y 3 hombres hay 8
+personas.</p>
+
+<p>Por lo tanto, en un problema de conteo que aplique la regla 1,
+debemos identificar primero los conjuntos $A$ y $B$ y después verificar
+que se cumple la hipótesis $A\cap B=\emptyset$.</p>
+
+<p>Si $A\cap B\ne\emptyset$, se tiene que</p>
+
+<script type="math/tex; mode=display">
+|A\cup B|=|A|+|B|-|A\cap B|,
+</script>
+
+<p>y este es un caso particular del principio de inclusión-exclusión, que
+será considerado más adelante.</p>
+
+<p>La regla 1 puede expresarse de un modo más general, aplicable a
+problemas más complicados:</p>
+
+<dl>
+  <dt><strong>Regla 2</strong></dt>
+  <dd>Si <script type="math/tex">A_{1},A_{2},\ldots,A_{m}</script> son conjuntos finitos tales que
+<script type="math/tex">A_{i}\cap A_{j}=\emptyset</script> para cada par de números $i,j$ con $i\ne j$,
+entonces:</dd>
+</dl>
+
+<script type="math/tex; mode=display">
+|A_{1}\cup A_{2}\cup\cdots\cup A_{m}| =
+|A_{1}|+|A_{2}|+\cdots+|A_{m}|.
+</script>
+
+<p>Y por supuesto, podemos enunciar un caso particular de la
+regla 2 que nos resultará útil:</p>
+
+<dl>
+  <dt><strong>Regla 3</strong></dt>
+  <dd>Si <script type="math/tex">A_{1},A_{2},\ldots,A_{m}</script> son conjuntos finitos tales que
+<script type="math/tex">A_{i}\cap A_{j}=\emptyset</script> para cada par de números $i,j$ con $i\ne
+j$, y <script type="math/tex">|A_{1}|=|A_{2}|=\cdots=|A_{n}|</script>, entonces</dd>
+</dl>
+
+<script type="math/tex; mode=display">
+|A_{1}\cup A_{2}\cup\cdots\cup A_{m}| = m|A_{1}|.
+</script>
+
+<p>La regla 3 puede aplicarse, por ejemplo, al problema:</p>
+
+<dl>
+  <dt><strong>Problema 1</strong></dt>
+  <dd>Si en una fonda tienen 3 sopas distintas y 4 guisados, ¿de
+cuántas maneras distintas puede servirse la comida corrida? (Suponemos
+que una comida consta de exactamente una sopa y exactamente un guisado)</dd>
+</dl>
+
+<p>Este problema lo podemos solucionar del siguiente modo: Sea $X$ el
+conjunto de las comidas posibles. Para $i=1,2,3$, sea <script type="math/tex">A_{i}</script> el
+conjunto de las comidas donde se sirve la sopa $i$. Entonces
+<script type="math/tex">X=A_{1}\cup A_{2}\cup A_{3}</script>, pues en cada comida se sirve una sopa.
+Además se tiene, por ejemplo, que <script type="math/tex">A_{1}\cap A_{2}=\emptyset</script>, pues en
+una comida no se pueden servir la sopa 1 y la sopa 2 al mismo tiempo.</p>
+
+<p>Tenemos que <script type="math/tex">|A_{1}|=|A_{2}|=|A_{3}|=4</script>, pues ya que se sirvió una sopa
+dada, hay exactamente 4 elecciones para el guisado. Usando la
+regla 3, se tiene que $|X|=3\cdot 4=12$.</p>
+
+<p>La regla 3 puede reformularse de un modo equivalente, que nos
+puede resultar más familiar:</p>
+
+<dl>
+  <dt><strong>Regla 4</strong></dt>
+  <dd>Supongamos que una tarea se cumple en 2 etapas independientes.
+Hay $m$ maneras de efectuar la primera etapa y para cada una de ellas
+hay $n$ maneras de efectuar la segunda. Entonces la tarea se puede
+cumplir de $mn$ maneras.</dd>
+</dl>
+
+<p>Y así como la regla 2 fue una generalización de la
+regla 1, podemos generalizar la regla 4 al caso de más
+de dos etapas:</p>
+
+<dl>
+  <dt><strong>Regla 5</strong></dt>
+  <dd>Supongamos que una tarea se cumple en $k$ etapas donde hay
+$m_i$ maneras de efectuar la $i$-ésima etapa, independientemente de la
+forma que se efectúen las demás. Entonces la tarea se puede cumplir de
+<script type="math/tex">m_{1}m_{2}\cdots m_{k}</script> maneras.</dd>
+</dl>
 ]]></content>
   </entry>
   

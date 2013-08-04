@@ -150,6 +150,394 @@ MathJax.Hub.Config({
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/matematicas-discretas/blog/2013/08/01/permutaciones/">Permutaciones</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-01T16:54:00-05:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><dl>
+  <dt><strong>Problema 2</strong></dt>
+  <dd>De un grupo de cinco personas: Ana, Benjamín, Carlos, Diana
+y Erika, se quiere escoger una mesa directiva que constará de
+presidente, secretario y tesorero. ¿De cuántas maneras posibles se puede
+hacer la elección (suponiendo que una persona puede ocupar más de un
+cargo)?</dd>
+</dl>
+
+<p>En éste caso, aplicamos la regla 5, pues cada uno de los tres
+cargos se puede ocupar de 5 maneras, independientemente de cómo se
+ocupen los otros. Por lo tanto, hay $5\cdot 5\cdot 5=5^{3}=125$ maneras
+de llenar la mesa directiva.</p>
+
+<p>Consideremos un problema más sencillo, en el que sea factible enunciar
+todas las posibilidades. Supongamos que sólo hay tres personas: Ana,
+Benjamín y Carlos, que sólo hay dos cargos: presidente y secretario, y
+que es posible que los dos cargos recaigan en la misma persona. Si
+representamos, por ejemplo, la mesa directiva donde Carlos es presidente
+y Benjamín es secretario con CB, entonces las $3^{2}$ soluciones son:</p>
+
+<blockquote>
+  <p>AA, BB, CC, AB, AC, BA, BC, CA, CB.</p>
+</blockquote>
+
+<p>a éstas las llamamos <em>permutaciones ordenadas (con repetición)</em>, de
+tamaño 2, de las tres letras A, B, C.</p>
+
+<p>En general, la cantidad de permutaciones ordenadas con repetición de un
+conjunto de $m$ elementos de tamaño $k$ es $m^{k}$.</p>
+
+<p>A continuación tenemos un ejemplo de un problema que, aunque en
+principio no habla de permutaciones, se puede plantear en tales
+términos.</p>
+
+<dl>
+  <dt><strong>Problema 5</strong></dt>
+  <dd>¿Cuántos subconjuntos tiene el conjunto $A={1,2,3,4,5}$.</dd>
+</dl>
+
+<p>Representaremos, por ejemplo, al subconjunto ${1,3,4}$ con la
+permutación ordenada con repetición SNSSN, con lo que queremos decir que
+el 1,3,4 SÍ están en el subconjunto y 2,5 NO están. De este modo, el
+conjunto vacío se representa con NNNNN y el conjunto $A$ con SSSSS.
+Obtenemos una correspondencia biyectiva entre el conjunto que queremos
+contar y las permutaciones ordenadas con repetición de tamaño 5 de los
+símbolos S,N. Por lo tanto, el conjunto $A$ tiene $2^{5}$ subconjuntos.
+(En general, un conjunto de $n$ elementos tiene exactamente $2^{n}$
+subconjuntos.)</p>
+
+<p>Ahora consideraremos el caso de permutaciones donde no se permite
+repeticiones.</p>
+
+<dl>
+  <dt><strong>Problema 3</strong></dt>
+  <dd>Supongamos el mismo grupo de cinco personas del
+problema 2, formando la misma mesa directiva. ¿De cuántas
+maneras se puede ocupar la mesa directiva, ahora con la condición de que
+ninguna persona puede ocupar más de un cargo?</dd>
+</dl>
+
+<p>Hay que aplicar la regla 5: primero, el cargo de presidente se puede
+ocupar de 5 maneras. Independientemente de quién sea elegido presidente,
+el cargo de secretario se puede designar de 4 maneras. Finalmente, el
+tesorero puede escogerse de 3 maneras. En total hay $5\cdot 4\cdot 3
+=60$ modos de llenar la mesa directiva con las condiciones dadas.</p>
+
+<p>Nuevamente consideremos un problema más sencillo. Supongamos que sólo
+hay tres personas: Ana, Benjamín y Carlos, que sólo hay dos cargos:
+presidente y secretario, y que no se permiten los dos cargos para la
+misma persona. Las $3\cdot 2$ posibles maneras de formar la mesa
+directiva son:</p>
+
+<blockquote>
+  <p>AB, AC, BA, BC, CA, CB.</p>
+</blockquote>
+
+<p>a estas las llamamos <em>permutaciones ordenadas (sin repetición)</em> de las
+tres letras A, B, C, de 2 elementos.</p>
+
+<dl>
+  <dt><strong>Problema 4</strong></dt>
+  <dd>¿Cuántas permutaciones ordenadas de 4 elementos se pueden
+hacer con las letras A, B, C, D, E, F, G, H, I, J?</dd>
+</dl>
+
+<p>Son 10 letras, la primera se puede escoger de 10 modos, la segunda de 9
+modos, etc., por lo tanto la cantidad de permutaciones ordenadas es
+$10\cdot 9\cdot 8\cdot 7$.</p>
+
+<p>La cantidad de permutaciones ordenadas de tamaño $k$ de un conjunto de
+$m$ elementos será denotada con el símbolo $P_{m,k}$, y es igual a
+$m(m-1)(m-2)\cdots$ hasta tener $k$ factores, es decir:</p>
+
+<script type="math/tex; mode=display">
+P_{m,k}=m(m-1)(m-2)\cdots (m-(k-1)).
+</script>
+
+<p>Esta fórmula se puede escribir mejor usando la definición del
+<em>factorial</em> de $m$:</p>
+
+<script type="math/tex; mode=display">
+m!=1\cdot 2\cdot 3\cdots (m-1)\cdot m,
+</script>
+
+<p>pues entonces:</p>
+
+<script type="math/tex; mode=display">
+P_{m,k}=\frac{m!}{(m-k)!}.
+</script>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/matematicas-discretas/blog/2013/07/31/reglas-fundamentales-de-conteo/">Reglas fundamentales de conteo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-31T16:29:00-05:00" pubdate data-updated="true">Jul 31<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>La forma más sencilla de la técnica fundamental de conteo dice:</p>
+
+<dl>
+  <dt><strong>Regla 1</strong></dt>
+  <dd>Si $A$ y $B$ son conjuntos finitos y $A\cap B=\emptyset$,
+entonces:</dd>
+</dl>
+
+<script type="math/tex; mode=display">
+|A\cup B|=|A|+|B|
+</script>
+
+<p>Por ejemplo, en un conjunto donde hay 5 mujeres y 3 hombres hay 8
+personas.</p>
+
+<p>Por lo tanto, en un problema de conteo que aplique la regla 1,
+debemos identificar primero los conjuntos $A$ y $B$ y después verificar
+que se cumple la hipótesis $A\cap B=\emptyset$.</p>
+
+<p>Si $A\cap B\ne\emptyset$, se tiene que</p>
+
+<script type="math/tex; mode=display">
+|A\cup B|=|A|+|B|-|A\cap B|,
+</script>
+
+<p>y este es un caso particular del principio de inclusión-exclusión, que
+será considerado más adelante.</p>
+
+<p>La regla 1 puede expresarse de un modo más general, aplicable a
+problemas más complicados:</p>
+
+<dl>
+  <dt><strong>Regla 2</strong></dt>
+  <dd>Si <script type="math/tex">A_{1},A_{2},\ldots,A_{m}</script> son conjuntos finitos tales que
+<script type="math/tex">A_{i}\cap A_{j}=\emptyset</script> para cada par de números $i,j$ con $i\ne j$,
+entonces:</dd>
+</dl>
+
+<script type="math/tex; mode=display">
+|A_{1}\cup A_{2}\cup\cdots\cup A_{m}| =
+|A_{1}|+|A_{2}|+\cdots+|A_{m}|.
+</script>
+
+<p>Y por supuesto, podemos enunciar un caso particular de la
+regla 2 que nos resultará útil:</p>
+
+<dl>
+  <dt><strong>Regla 3</strong></dt>
+  <dd>Si <script type="math/tex">A_{1},A_{2},\ldots,A_{m}</script> son conjuntos finitos tales que
+<script type="math/tex">A_{i}\cap A_{j}=\emptyset</script> para cada par de números $i,j$ con $i\ne
+j$, y <script type="math/tex">|A_{1}|=|A_{2}|=\cdots=|A_{n}|</script>, entonces</dd>
+</dl>
+
+<script type="math/tex; mode=display">
+|A_{1}\cup A_{2}\cup\cdots\cup A_{m}| = m|A_{1}|.
+</script>
+
+<p>La regla 3 puede aplicarse, por ejemplo, al problema:</p>
+
+<dl>
+  <dt><strong>Problema 1</strong></dt>
+  <dd>Si en una fonda tienen 3 sopas distintas y 4 guisados, ¿de
+cuántas maneras distintas puede servirse la comida corrida? (Suponemos
+que una comida consta de exactamente una sopa y exactamente un guisado)</dd>
+</dl>
+
+<p>Este problema lo podemos solucionar del siguiente modo: Sea $X$ el
+conjunto de las comidas posibles. Para $i=1,2,3$, sea <script type="math/tex">A_{i}</script> el
+conjunto de las comidas donde se sirve la sopa $i$. Entonces
+<script type="math/tex">X=A_{1}\cup A_{2}\cup A_{3}</script>, pues en cada comida se sirve una sopa.
+Además se tiene, por ejemplo, que <script type="math/tex">A_{1}\cap A_{2}=\emptyset</script>, pues en
+una comida no se pueden servir la sopa 1 y la sopa 2 al mismo tiempo.</p>
+
+<p>Tenemos que <script type="math/tex">|A_{1}|=|A_{2}|=|A_{3}|=4</script>, pues ya que se sirvió una sopa
+dada, hay exactamente 4 elecciones para el guisado. Usando la
+regla 3, se tiene que $|X|=3\cdot 4=12$.</p>
+
+<p>La regla 3 puede reformularse de un modo equivalente, que nos
+puede resultar más familiar:</p>
+
+<dl>
+  <dt><strong>Regla 4</strong></dt>
+  <dd>Supongamos que una tarea se cumple en 2 etapas independientes.
+Hay $m$ maneras de efectuar la primera etapa y para cada una de ellas
+hay $n$ maneras de efectuar la segunda. Entonces la tarea se puede
+cumplir de $mn$ maneras.</dd>
+</dl>
+
+<p>Y así como la regla 2 fue una generalización de la
+regla 1, podemos generalizar la regla 4 al caso de más
+de dos etapas:</p>
+
+<dl>
+  <dt><strong>Regla 5</strong></dt>
+  <dd>Supongamos que una tarea se cumple en $k$ etapas donde hay
+$m_i$ maneras de efectuar la $i$-ésima etapa, independientemente de la
+forma que se efectúen las demás. Entonces la tarea se puede cumplir de
+<script type="math/tex">m_{1}m_{2}\cdots m_{k}</script> maneras.</dd>
+</dl>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/matematicas-discretas/blog/2013/07/31/conjuntos/">Conjuntos</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-31T16:15:00-05:00" pubdate data-updated="true">Jul 31<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Una manera de aclarar un problema es usar la terminología adecuada, y en
+nuestro caso, conviene recordar el lenguaje de la teoría de conjuntos.</p>
+
+<p>Un <em>conjunto</em> es una colección de objetos, llamados <em>elementos</em> del
+conjunto. Los conjuntos se denotan usualmente con letras mayúsculas, y
+los elementos con letras minúsculas. Si $x$ es un elemento del conjunto
+$A$, escribimos $x\in A$, y si no, escribimos $x\not\in A$. Recordemos
+que hay dos maneras de describir los elementos de un conjunto: una de
+ellas es enlistando sus elementos, por ejemplo:</p>
+
+<script type="math/tex; mode=display">A=\{1,2,3,4\},</script>
+
+<p>del cual inmediatamente podemos decir que tiene $4$ elementos. En
+general, denotaremos con $|A|$ a la cantidad de elementos del conjunto
+$A$, en este caso, $|A|=4$, y decimos que la <em>cardinalidad</em> del conjunto
+es $4$.</p>
+
+<p>Por otro lado, tenemos el caso importante del conjunto de todos los
+números naturales:</p>
+
+<script type="math/tex; mode=display">\mathbb{N}=\{1,2,3,\ldots\},</script>
+
+<p>que tiene una infinidad de elementos, (por lo cual se escriben puntos
+suspensivos, y el contexto nos dice cuáles son los elementos que
+siguen). El conjunto $\mathbb{N}$ tiene cardinalidad infinita.</p>
+
+<p>La otra manera es escribir una condición que satisfacen los miembros del
+conjunto. Por ejemplo:</p>
+
+<script type="math/tex; mode=display"> B=\{x\in\mathbb{N}\mid 2\text{ divide a } x\text{ y }1\le x\le 20\}.</script>
+
+<p>En este caso no es tan inmediato contar cuántos elementos tiene $B$,
+pero podemos darnos cuenta que, por ejemplo, ni $5$ ni $30$ son
+elementos de $B$, pero $10\in B$. Después de un momento, podríamos
+escribir explícitamente los elementos de $B$:</p>
+
+<script type="math/tex; mode=display">B=\{2,4,6,8,10,12,14,16,18,20\}</script>
+
+<p>y al contarlos, obtenemos que la cardinalidad de $B$ es $10$.</p>
+
+<p>Habrá otras ocasiones en los cuales sea impráctico o imposible hacer una
+lista completa de los elementos del conjunto que queremos contar. Es en
+ese tipo de problemas que las técnicas de conteo expuestas en éste
+documento pueden resultar útiles.</p>
+
+<p>Antes de continuar, recordaremos la notación de teoría de conjuntos:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Notación</th>
+      <th style="text-align: center">Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">$A\cup B$</td>
+      <td style="text-align: center">unión de conjuntos</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$A\cap B$</td>
+      <td style="text-align: center">intersección de conjuntos</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$\emptyset$</td>
+      <td style="text-align: center">conjunto vacío</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$A\subseteq B$</td>
+      <td style="text-align: center">$A$ es subconjunto de $B$.</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
     <a href="/matematicas-discretas/blog/archives">Archivo del blog</a>
@@ -164,6 +552,18 @@ MathJax.Hub.Config({
     
       <li class="post">
         <a href="/matematicas-discretas/blog/2013/08/02/ejercicios-de-conteo/">Ejercicios de conteo</a>
+      </li>
+    
+      <li class="post">
+        <a href="/matematicas-discretas/blog/2013/08/01/permutaciones/">Permutaciones</a>
+      </li>
+    
+      <li class="post">
+        <a href="/matematicas-discretas/blog/2013/07/31/reglas-fundamentales-de-conteo/">Reglas fundamentales de conteo</a>
+      </li>
+    
+      <li class="post">
+        <a href="/matematicas-discretas/blog/2013/07/31/conjuntos/">Conjuntos</a>
       </li>
     
   </ul>

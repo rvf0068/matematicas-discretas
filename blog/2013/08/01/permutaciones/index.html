@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ejercicios de conteo - Matemáticas Discretas</title>
+  <title>Permutaciones - Matemáticas Discretas</title>
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Si se tiene tela de 5 colores distintos, ¿de cuántas maneras se puede hacer una bandera con franjas de tres colores? (suponiendo, primero que los &hellip;">
+  <meta name="description" content="Problema 2 De un grupo de cinco personas: Ana, Benjamín, Carlos, Diana
+y Erika, se quiere escoger una mesa directiva que constará de
+presidente, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rvf0068.github.io/matematicas-discretas/blog/2013/08/02/ejercicios-de-conteo/">
+  <link rel="canonical" href="http://rvf0068.github.io/matematicas-discretas/blog/2013/08/01/permutaciones/">
   <link href="/matematicas-discretas/favicon.png" rel="icon">
   <link href="/matematicas-discretas/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/matematicas-discretas/javascripts/modernizr-2.0.js"></script>
@@ -90,7 +92,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Ejercicios de conteo</h1>
+      <h1 class="entry-title">Permutaciones</h1>
     
     
       <p class="meta">
@@ -106,40 +108,123 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2013-08-02T14:13:00-05:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
+<time datetime="2013-08-01T16:54:00-05:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><ol>
-  <li>Si se tiene tela de 5 colores distintos, ¿de cuántas maneras se
-  puede hacer una bandera con franjas de tres colores?  (suponiendo,
-  primero que los colores se pueden repetir y luego que no). Repetir
-  las preguntas suponiendo que el rojo tiene que ser uno de los
-  colores escogidos.</li>
-  <li>¿En cuántas de las $6!$ &#8220;palabras’’ de 6 letras distintas que
-  se pueden formar con las letras ABCDEF se tiene que la A aparece
-  junto a la D?</li>
-  <li>¿Cuántos números enteros entre 1000 y 9999 no tienen dígitos
-  repetidos?</li>
-  <li>¿Cuántos números enteros entre 1000 y 9999 no tienen al 9 como
-  uno de sus dígitos?</li>
-  <li>Si un conjunto $X$ tiene $n$ elementos, ¿cuántos subconjuntos tiene
-  $X$ que tengan una cantidad par de elementos?</li>
-  <li>¿De cuántas maneras se pueden escoger dos libros de diferentes
-  materias de entre 5 libros de álgebra, 4 de análisis y 6 de variable
-  compleja?</li>
-  <li>¿De cuántas maneras se pueden sentar 10 personas en una mesa
-  redonda? </li>
-  <li>¿En cuántas de las $26!$ permutaciones de las 26 letras de la A a
-  la Z hay exactamente 10 letras entre la A y la Z?</li>
-  <li>¿Cuántas sucesiones de longitud $r$ de ceros y unos tienen una
-  cantidad par de unos?</li>
-  <li>¿En cuántas sucesiones de ocho volados se obtienen
-  exactamente cinco águilas y tres soles?</li>
-</ol>
+<div class="entry-content"><dl>
+  <dt><strong>Problema 2</strong></dt>
+  <dd>De un grupo de cinco personas: Ana, Benjamín, Carlos, Diana
+y Erika, se quiere escoger una mesa directiva que constará de
+presidente, secretario y tesorero. ¿De cuántas maneras posibles se puede
+hacer la elección (suponiendo que una persona puede ocupar más de un
+cargo)?</dd>
+</dl>
+
+<p>En éste caso, aplicamos la regla 5, pues cada uno de los tres
+cargos se puede ocupar de 5 maneras, independientemente de cómo se
+ocupen los otros. Por lo tanto, hay $5\cdot 5\cdot 5=5^{3}=125$ maneras
+de llenar la mesa directiva.</p>
+
+<p>Consideremos un problema más sencillo, en el que sea factible enunciar
+todas las posibilidades. Supongamos que sólo hay tres personas: Ana,
+Benjamín y Carlos, que sólo hay dos cargos: presidente y secretario, y
+que es posible que los dos cargos recaigan en la misma persona. Si
+representamos, por ejemplo, la mesa directiva donde Carlos es presidente
+y Benjamín es secretario con CB, entonces las $3^{2}$ soluciones son:</p>
+
+<blockquote>
+  <p>AA, BB, CC, AB, AC, BA, BC, CA, CB.</p>
+</blockquote>
+
+<p>a éstas las llamamos <em>permutaciones ordenadas (con repetición)</em>, de
+tamaño 2, de las tres letras A, B, C.</p>
+
+<p>En general, la cantidad de permutaciones ordenadas con repetición de un
+conjunto de $m$ elementos de tamaño $k$ es $m^{k}$.</p>
+
+<p>A continuación tenemos un ejemplo de un problema que, aunque en
+principio no habla de permutaciones, se puede plantear en tales
+términos.</p>
+
+<dl>
+  <dt><strong>Problema 5</strong></dt>
+  <dd>¿Cuántos subconjuntos tiene el conjunto $A={1,2,3,4,5}$.</dd>
+</dl>
+
+<p>Representaremos, por ejemplo, al subconjunto ${1,3,4}$ con la
+permutación ordenada con repetición SNSSN, con lo que queremos decir que
+el 1,3,4 SÍ están en el subconjunto y 2,5 NO están. De este modo, el
+conjunto vacío se representa con NNNNN y el conjunto $A$ con SSSSS.
+Obtenemos una correspondencia biyectiva entre el conjunto que queremos
+contar y las permutaciones ordenadas con repetición de tamaño 5 de los
+símbolos S,N. Por lo tanto, el conjunto $A$ tiene $2^{5}$ subconjuntos.
+(En general, un conjunto de $n$ elementos tiene exactamente $2^{n}$
+subconjuntos.)</p>
+
+<p>Ahora consideraremos el caso de permutaciones donde no se permite
+repeticiones.</p>
+
+<dl>
+  <dt><strong>Problema 3</strong></dt>
+  <dd>Supongamos el mismo grupo de cinco personas del
+problema 2, formando la misma mesa directiva. ¿De cuántas
+maneras se puede ocupar la mesa directiva, ahora con la condición de que
+ninguna persona puede ocupar más de un cargo?</dd>
+</dl>
+
+<p>Hay que aplicar la regla 5: primero, el cargo de presidente se puede
+ocupar de 5 maneras. Independientemente de quién sea elegido presidente,
+el cargo de secretario se puede designar de 4 maneras. Finalmente, el
+tesorero puede escogerse de 3 maneras. En total hay $5\cdot 4\cdot 3
+=60$ modos de llenar la mesa directiva con las condiciones dadas.</p>
+
+<p>Nuevamente consideremos un problema más sencillo. Supongamos que sólo
+hay tres personas: Ana, Benjamín y Carlos, que sólo hay dos cargos:
+presidente y secretario, y que no se permiten los dos cargos para la
+misma persona. Las $3\cdot 2$ posibles maneras de formar la mesa
+directiva son:</p>
+
+<blockquote>
+  <p>AB, AC, BA, BC, CA, CB.</p>
+</blockquote>
+
+<p>a estas las llamamos <em>permutaciones ordenadas (sin repetición)</em> de las
+tres letras A, B, C, de 2 elementos.</p>
+
+<dl>
+  <dt><strong>Problema 4</strong></dt>
+  <dd>¿Cuántas permutaciones ordenadas de 4 elementos se pueden
+hacer con las letras A, B, C, D, E, F, G, H, I, J?</dd>
+</dl>
+
+<p>Son 10 letras, la primera se puede escoger de 10 modos, la segunda de 9
+modos, etc., por lo tanto la cantidad de permutaciones ordenadas es
+$10\cdot 9\cdot 8\cdot 7$.</p>
+
+<p>La cantidad de permutaciones ordenadas de tamaño $k$ de un conjunto de
+$m$ elementos será denotada con el símbolo $P_{m,k}$, y es igual a
+$m(m-1)(m-2)\cdots$ hasta tener $k$ factores, es decir:</p>
+
+<script type="math/tex; mode=display">
+P_{m,k}=m(m-1)(m-2)\cdots (m-(k-1)).
+</script>
+
+<p>Esta fórmula se puede escribir mejor usando la definición del
+<em>factorial</em> de $m$:</p>
+
+<script type="math/tex; mode=display">
+m!=1\cdot 2\cdot 3\cdots (m-1)\cdot m,
+</script>
+
+<p>pues entonces:</p>
+
+<script type="math/tex; mode=display">
+P_{m,k}=\frac{m!}{(m-k)!}.
+</script>
 </div>
 
 
@@ -162,21 +247,15 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2013-08-02T14:13:00-05:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
+<time datetime="2013-08-01T16:54:00-05:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/matematicas-discretas/blog/categories/combinaciones/'>combinaciones</a>, <a class='category' href='/matematicas-discretas/blog/categories/conteo/'>conteo</a>, <a class='category' href='/matematicas-discretas/blog/categories/permutaciones/'>permutaciones</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/matematicas-discretas/blog/2013/08/02/ejercicios-de-conteo/" data-via="" data-counturl="http://rvf0068.github.io/matematicas-discretas/blog/2013/08/02/ejercicios-de-conteo/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/matematicas-discretas/blog/2013/08/01/permutaciones/" data-via="" data-counturl="http://rvf0068.github.io/matematicas-discretas/blog/2013/08/01/permutaciones/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -189,8 +268,10 @@ MathJax.Hub.Config({
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/matematicas-discretas/blog/2013/08/01/permutaciones/" title="Previous Post: Permutaciones">&laquo; Permutaciones</a>
+        <a class="basic-alignment left" href="/matematicas-discretas/blog/2013/07/31/reglas-fundamentales-de-conteo/" title="Previous Post: Reglas fundamentales de conteo">&laquo; Reglas fundamentales de conteo</a>
       
+      
+        <a class="basic-alignment right" href="/matematicas-discretas/blog/2013/08/02/ejercicios-de-conteo/" title="Next Post: Ejercicios de conteo">Ejercicios de conteo &raquo;</a>
       
     </p>
   </footer>
@@ -252,8 +333,8 @@ MathJax.Hub.Config({
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://rvf0068.github.io/matematicas-discretas/blog/2013/08/02/ejercicios-de-conteo/';
-        var disqus_url = 'http://rvf0068.github.io/matematicas-discretas/blog/2013/08/02/ejercicios-de-conteo/';
+        var disqus_identifier = 'http://rvf0068.github.io/matematicas-discretas/blog/2013/08/01/permutaciones/';
+        var disqus_url = 'http://rvf0068.github.io/matematicas-discretas/blog/2013/08/01/permutaciones/';
         var disqus_script = 'embed.js';
       
     (function () {

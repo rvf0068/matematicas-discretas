@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Matemáticas Discretas</title>
+  <title>Conjuntos - Matemáticas Discretas</title>
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Blog Archive 2013 Ejercicios de conteo
-Aug 02 2013 posted in combinaciones, conteo, permutaciones Permutaciones
-Aug 01 2013 Reglas fundamentales de &hellip;">
+  <meta name="description" content="Una manera de aclarar un problema es usar la terminología adecuada, y en
+nuestro caso, conviene recordar el lenguaje de la teoría de conjuntos. Un &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ Aug 01 2013 Reglas fundamentales de &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rvf0068.github.io/matematicas-discretas/archives/">
+  <link rel="canonical" href="http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos/">
   <link href="/matematicas-discretas/favicon.png" rel="icon">
   <link href="/matematicas-discretas/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/matematicas-discretas/javascripts/modernizr-2.0.js"></script>
@@ -88,74 +87,168 @@ MathJax.Hub.Config({
     <div id="main">
       <div id="content">
         <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Conjuntos</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-31T16:15:00-05:00" pubdate data-updated="true">Jul 31<span>st</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>Una manera de aclarar un problema es usar la terminología adecuada, y en
+nuestro caso, conviene recordar el lenguaje de la teoría de conjuntos.</p>
 
-  
-  <h2>2013</h2>
+<p>Un <em>conjunto</em> es una colección de objetos, llamados <em>elementos</em> del
+conjunto. Los conjuntos se denotan usualmente con letras mayúsculas, y
+los elementos con letras minúsculas. Si $x$ es un elemento del conjunto
+$A$, escribimos $x\in A$, y si no, escribimos $x\not\in A$. Recordemos
+que hay dos maneras de describir los elementos de un conjunto: una de
+ellas es enlistando sus elementos, por ejemplo:</p>
 
-<article>
-  
-<h1><a href="/matematicas-discretas/blog/2013/08/02/ejercicios-de-conteo/">Ejercicios de conteo</a></h1>
-<time datetime="2013-08-02T14:13:00-05:00" pubdate><span class='month'>Aug</span> <span class='day'>02</span> <span class='year'>2013</span></time>
+<script type="math/tex; mode=display">A=\{1,2,3,4\},</script>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/matematicas-discretas/blog/categories/combinaciones/'>combinaciones</a>, <a class='category' href='/matematicas-discretas/blog/categories/conteo/'>conteo</a>, <a class='category' href='/matematicas-discretas/blog/categories/permutaciones/'>permutaciones</a></span>
-</footer>
+<p>del cual inmediatamente podemos decir que tiene $4$ elementos. En
+general, denotaremos con $|A|$ a la cantidad de elementos del conjunto
+$A$, en este caso, $|A|=4$, y decimos que la <em>cardinalidad</em> del conjunto
+es $4$.</p>
 
+<p>Por otro lado, tenemos el caso importante del conjunto de todos los
+números naturales:</p>
 
-</article>
+<script type="math/tex; mode=display">\mathbb{N}=\{1,2,3,\ldots\},</script>
 
+<p>que tiene una infinidad de elementos, (por lo cual se escriben puntos
+suspensivos, y el contexto nos dice cuáles son los elementos que
+siguen). El conjunto $\mathbb{N}$ tiene cardinalidad infinita.</p>
 
+<p>La otra manera es escribir una condición que satisfacen los miembros del
+conjunto. Por ejemplo:</p>
 
-<article>
-  
-<h1><a href="/matematicas-discretas/blog/2013/08/01/permutaciones/">Permutaciones</a></h1>
-<time datetime="2013-08-01T16:54:00-05:00" pubdate><span class='month'>Aug</span> <span class='day'>01</span> <span class='year'>2013</span></time>
+<script type="math/tex; mode=display"> B=\{x\in\mathbb{N}\mid 2\text{ divide a } x\text{ y }1\le x\le 20\}.</script>
 
+<p>En este caso no es tan inmediato contar cuántos elementos tiene $B$,
+pero podemos darnos cuenta que, por ejemplo, ni $5$ ni $30$ son
+elementos de $B$, pero $10\in B$. Después de un momento, podríamos
+escribir explícitamente los elementos de $B$:</p>
 
-</article>
+<script type="math/tex; mode=display">B=\{2,4,6,8,10,12,14,16,18,20\}</script>
 
+<p>y al contarlos, obtenemos que la cardinalidad de $B$ es $10$.</p>
 
+<p>Habrá otras ocasiones en los cuales sea impráctico o imposible hacer una
+lista completa de los elementos del conjunto que queremos contar. Es en
+ese tipo de problemas que las técnicas de conteo expuestas en éste
+documento pueden resultar útiles.</p>
 
-<article>
-  
-<h1><a href="/matematicas-discretas/blog/2013/07/31/reglas-fundamentales-de-conteo/">Reglas fundamentales de conteo</a></h1>
-<time datetime="2013-07-31T16:29:00-05:00" pubdate><span class='month'>Jul</span> <span class='day'>31</span> <span class='year'>2013</span></time>
+<p>Antes de continuar, recordaremos la notación de teoría de conjuntos:</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/matematicas-discretas/blog/categories/conteo/'>conteo</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/matematicas-discretas/blog/2013/07/31/conjuntos/">Conjuntos</a></h1>
-<time datetime="2013-07-31T16:15:00-05:00" pubdate><span class='month'>Jul</span> <span class='day'>31</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/matematicas-discretas/blog/categories/conjuntos/'>conjuntos</a></span>
-</footer>
-
-
-</article>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Notación</th>
+      <th style="text-align: center">Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">$A\cup B$</td>
+      <td style="text-align: center">unión de conjuntos</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$A\cap B$</td>
+      <td style="text-align: center">intersección de conjuntos</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$\emptyset$</td>
+      <td style="text-align: center">conjunto vacío</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$A\subseteq B$</td>
+      <td style="text-align: center">$A$ es subconjunto de $B$.</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Rafael Villarroel</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-31T16:15:00-05:00" pubdate data-updated="true">Jul 31<span>st</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/matematicas-discretas/blog/categories/conjuntos/'>conjuntos</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos/" data-via="" data-counturl="http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/matematicas-discretas/blog/2013/07/31/reglas-fundamentales-de-conteo/" title="Next Post: Reglas fundamentales de conteo">Reglas fundamentales de conteo &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -206,7 +299,10 @@ MathJax.Hub.Config({
       var disqus_shortname = 'matematicasdiscretas';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos/';
+        var disqus_url = 'http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

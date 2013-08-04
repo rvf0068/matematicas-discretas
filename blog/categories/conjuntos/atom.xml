@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: conjuntos | Matemáticas Discretas]]></title>
+  <link href="http://rvf0068.github.io/matematicas-discretas/blog/categories/conjuntos/atom.xml" rel="self"/>
+  <link href="http://rvf0068.github.io/matematicas-discretas/"/>
+  <updated>2013-08-04T17:12:28-05:00</updated>
+  <id>http://rvf0068.github.io/matematicas-discretas/</id>
+  <author>
+    <name><![CDATA[Rafael Villarroel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conjuntos]]></title>
+    <link href="http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos/"/>
+    <updated>2013-07-31T16:15:00-05:00</updated>
+    <id>http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos</id>
+    <content type="html"><![CDATA[<p>Una manera de aclarar un problema es usar la terminología adecuada, y en
+nuestro caso, conviene recordar el lenguaje de la teoría de conjuntos.</p>
+
+<p>Un <em>conjunto</em> es una colección de objetos, llamados <em>elementos</em> del
+conjunto. Los conjuntos se denotan usualmente con letras mayúsculas, y
+los elementos con letras minúsculas. Si $x$ es un elemento del conjunto
+$A$, escribimos $x\in A$, y si no, escribimos $x\not\in A$. Recordemos
+que hay dos maneras de describir los elementos de un conjunto: una de
+ellas es enlistando sus elementos, por ejemplo:</p>
+
+<script type="math/tex; mode=display">A=\{1,2,3,4\},</script>
+
+<p>del cual inmediatamente podemos decir que tiene $4$ elementos. En
+general, denotaremos con $|A|$ a la cantidad de elementos del conjunto
+$A$, en este caso, $|A|=4$, y decimos que la <em>cardinalidad</em> del conjunto
+es $4$.</p>
+
+<p>Por otro lado, tenemos el caso importante del conjunto de todos los
+números naturales:</p>
+
+<script type="math/tex; mode=display">\mathbb{N}=\{1,2,3,\ldots\},</script>
+
+<p>que tiene una infinidad de elementos, (por lo cual se escriben puntos
+suspensivos, y el contexto nos dice cuáles son los elementos que
+siguen). El conjunto $\mathbb{N}$ tiene cardinalidad infinita.</p>
+
+<p>La otra manera es escribir una condición que satisfacen los miembros del
+conjunto. Por ejemplo:</p>
+
+<script type="math/tex; mode=display"> B=\{x\in\mathbb{N}\mid 2\text{ divide a } x\text{ y }1\le x\le 20\}.</script>
+
+<p>En este caso no es tan inmediato contar cuántos elementos tiene $B$,
+pero podemos darnos cuenta que, por ejemplo, ni $5$ ni $30$ son
+elementos de $B$, pero $10\in B$. Después de un momento, podríamos
+escribir explícitamente los elementos de $B$:</p>
+
+<script type="math/tex; mode=display">B=\{2,4,6,8,10,12,14,16,18,20\}</script>
+
+<p>y al contarlos, obtenemos que la cardinalidad de $B$ es $10$.</p>
+
+<p>Habrá otras ocasiones en los cuales sea impráctico o imposible hacer una
+lista completa de los elementos del conjunto que queremos contar. Es en
+ese tipo de problemas que las técnicas de conteo expuestas en éste
+documento pueden resultar útiles.</p>
+
+<p>Antes de continuar, recordaremos la notación de teoría de conjuntos:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Notación</th>
+      <th style="text-align: center">Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">$A\cup B$</td>
+      <td style="text-align: center">unión de conjuntos</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$A\cap B$</td>
+      <td style="text-align: center">intersección de conjuntos</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$\emptyset$</td>
+      <td style="text-align: center">conjunto vacío</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$A\subseteq B$</td>
+      <td style="text-align: center">$A$ es subconjunto de $B$.</td>
+    </tr>
+  </tbody>
+</table>
+
+]]></content>
+  </entry>
+  
+</feed>
