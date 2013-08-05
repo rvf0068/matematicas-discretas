@@ -5,12 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Conjuntos - Matemáticas Discretas</title>
+  <title>El programa Sage - Matemáticas Discretas</title>
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Una manera de aclarar un problema es usar la terminología adecuada, y en
-nuestro caso, conviene recordar el lenguaje de la teoría de conjuntos. Un &hellip;">
+  <meta name="description" content="Sage es un programa de código abierto para
+realizar cálculos en diversas áreas de las matemáticas, desde nivel
+básico hasta investigación. Aquí &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +20,7 @@ nuestro caso, conviene recordar el lenguaje de la teoría de conjuntos. Un &hell
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos/">
+  <link rel="canonical" href="http://rvf0068.github.io/matematicas-discretas/blog/2013/08/05/el-programa-sage/">
   <link href="/matematicas-discretas/favicon.png" rel="icon">
   <link href="/matematicas-discretas/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/matematicas-discretas/javascripts/modernizr-2.0.js"></script>
@@ -93,7 +94,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Conjuntos</h1>
+      <h1 class="entry-title">El programa Sage</h1>
     
     
       <p class="meta">
@@ -109,87 +110,98 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2013-07-31T16:15:00-05:00" pubdate data-updated="true">Jul 31<span>st</span>, 2013</time>
+<time datetime="2013-08-05T08:55:00-05:00" pubdate data-updated="true">Aug 5<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Una manera de aclarar un problema es usar la terminología adecuada, y en
-nuestro caso, conviene recordar el lenguaje de la teoría de conjuntos.</p>
+<div class="entry-content"><p><a href="http://www.sagemath.org">Sage</a> es un programa de código abierto para
+realizar cálculos en diversas áreas de las matemáticas, desde nivel
+básico hasta investigación. Aquí muestro algunos ejemplos para
+familiarizarnos con su uso. Oprime el botón <code>¡Calcular!</code>.</p>
 
-<p>Un <em>conjunto</em> es una colección de objetos, llamados <em>elementos</em> del
-conjunto. Los conjuntos se denotan usualmente con letras mayúsculas, y
-los elementos con letras minúsculas. Si $x$ es un elemento del conjunto
-$A$, escribimos $x\in A$, y si no, escribimos $x\not\in A$. Recordemos
-que hay dos maneras de describir los elementos de un conjunto: una de
-ellas es enlistando sus elementos, por ejemplo:</p>
+<hr />
 
-<script type="math/tex; mode=display">A=\{1,2,3,4\},</script>
+<p>Un cálculo trivial:</p>
 
-<p>del cual inmediatamente podemos decir que tiene $4$ elementos. En
-general, denotaremos con $|A|$ a la cantidad de elementos del conjunto
-$A$, en este caso, $|A|=4$, y decimos que la <em>cardinalidad</em> del conjunto
-es $4$.</p>
+<div class="sage"><script type="text/x-sage">
+2+2
+</script></div>
 
-<p>Por otro lado, tenemos el caso importante del conjunto de todos los
-números naturales:</p>
+<hr />
 
-<script type="math/tex; mode=display">\mathbb{N}=\{1,2,3,\ldots\},</script>
+<p>En el siguiente ejemplo aparece una barra que puedes deslizar para
+cambiar el exponente: </p>
 
-<p>que tiene una infinidad de elementos, (por lo cual se escriben puntos
-suspensivos, y el contexto nos dice cuáles son los elementos que
-siguen). El conjunto $\mathbb{N}$ tiene cardinalidad infinita.</p>
+<hr />
 
-<p>La otra manera es escribir una condición que satisfacen los miembros del
-conjunto. Por ejemplo:</p>
+<p>Exponenciación:</p>
 
-<script type="math/tex; mode=display"> B=\{x\in\mathbb{N}\mid 2\text{ divide a } x\text{ y }1\le x\le 20\}.</script>
+<div class="sage"><script type="text/x-sage">
+@interact
+def f1(exponente=slider(2,20,1)):
+  k1 = exponente
+  k2 = 2^exponente
+  print "2^%s = %s" % (k1, k2)
+</script></div>
 
-<p>En este caso no es tan inmediato contar cuántos elementos tiene $B$,
-pero podemos darnos cuenta que, por ejemplo, ni $5$ ni $30$ son
-elementos de $B$, pero $10\in B$. Después de un momento, podríamos
-escribir explícitamente los elementos de $B$:</p>
+<hr />
 
-<script type="math/tex; mode=display">B=\{2,4,6,8,10,12,14,16,18,20\}</script>
+<p>Factorización:</p>
 
-<p>y al contarlos, obtenemos que la cardinalidad de $B$ es $10$.</p>
+<div class="sage"><script type="text/x-sage">
+factor(2013)
+</script></div>
 
-<p>Habrá otras ocasiones en los cuales sea impráctico o imposible hacer una
-lista completa de los elementos del conjunto que queremos contar. Es en
-ese tipo de problemas que las técnicas de conteo expuestas en éste
-documento pueden resultar útiles.</p>
+<div class="sage"><script type="text/x-sage">
+factor(x^4 - 30*x^3 - 80*x^2)
+</script></div>
 
-<p>Antes de continuar, recordaremos la notación de teoría de conjuntos:</p>
+<hr />
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Notación</th>
-      <th style="text-align: center">Significado</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">$A\cup B$</td>
-      <td style="text-align: center">unión de conjuntos</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$A\cap B$</td>
-      <td style="text-align: center">intersección de conjuntos</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$\emptyset$</td>
-      <td style="text-align: center">conjunto vacío</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">$A\subseteq B$</td>
-      <td style="text-align: center">$A$ es subconjunto de $B$.</td>
-    </tr>
-  </tbody>
-</table>
+<p>Resolución de ecuaciones:</p>
 
+<div class="sage"><script type="text/x-sage">
+x=var('x') 
+solve(x^2+3*x+2==0,x)
+</script></div>
+
+<div class="sage"><script type="text/x-sage">
+a=var('a')      
+solve(a*x^2+3*(a-1)*x+2,x)   
+</script></div>
+
+<hr />
+
+<p>Graficación de funciones de una variable:</p>
+
+<div class="sage"><script type="text/x-sage">
+f=(x-1)*(x-2)*(x-3)     
+plot(f,-1,4)
+</script></div>
+
+<div class="sage"><script type="text/x-sage">
+p1=plot(x,0,1)                         
+p2=plot(x^2,0,1,color="purple")
+p3=plot(x^3,0,1,color="green")
+show(p1+p2+p3)
+</script></div>
+
+<hr />
+
+<p>Graficación de funciones de dos variables (utiliza Java):</p>
+
+<div class="sage"><script type="text/x-sage">
+y=var('y') 
+plot3d(sin(x*y), (x, -pi, pi), (y, -pi, pi))
+</script></div>
+
+<hr />
+
+<p>En <a href="http://sagemath.org/eval.html">esta</a> página se encuentran muchos
+otros ejemplos.</p>
 </div>
 
 
@@ -212,12 +224,12 @@ documento pueden resultar útiles.</p>
   
 
 
-<time datetime="2013-07-31T16:15:00-05:00" pubdate data-updated="true">Jul 31<span>st</span>, 2013</time>
+<time datetime="2013-08-05T08:55:00-05:00" pubdate data-updated="true">Aug 5<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/matematicas-discretas/blog/categories/conjuntos/'>conjuntos</a>
+    <a class='category' href='/matematicas-discretas/blog/categories/sage/'>sage</a>
   
 </span>
 
@@ -226,7 +238,7 @@ documento pueden resultar útiles.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos/" data-via="" data-counturl="http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rvf0068.github.io/matematicas-discretas/blog/2013/08/05/el-programa-sage/" data-via="" data-counturl="http://rvf0068.github.io/matematicas-discretas/blog/2013/08/05/el-programa-sage/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -239,8 +251,8 @@ documento pueden resultar útiles.</p>
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/matematicas-discretas/blog/2013/08/02/ejercicios-de-conteo/" title="Previous Post: Ejercicios de conteo">&laquo; Ejercicios de conteo</a>
       
-        <a class="basic-alignment right" href="/matematicas-discretas/blog/2013/07/31/reglas-fundamentales-de-conteo/" title="Next Post: Reglas fundamentales de conteo">Reglas fundamentales de conteo &raquo;</a>
       
     </p>
   </footer>
@@ -306,8 +318,8 @@ documento pueden resultar útiles.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos/';
-        var disqus_url = 'http://rvf0068.github.io/matematicas-discretas/blog/2013/07/31/conjuntos/';
+        var disqus_identifier = 'http://rvf0068.github.io/matematicas-discretas/blog/2013/08/05/el-programa-sage/';
+        var disqus_url = 'http://rvf0068.github.io/matematicas-discretas/blog/2013/08/05/el-programa-sage/';
         var disqus_script = 'embed.js';
       
     (function () {

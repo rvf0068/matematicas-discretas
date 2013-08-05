@@ -9,7 +9,9 @@
   <meta name="author" content="Rafael Villarroel">
 
   
-  <meta name="description" content="Si se tiene tela de 5 colores distintos, ¿de cuántas maneras se puede hacer una bandera con franjas de tres colores? (suponiendo, primero que los &hellip;">
+  <meta name="description" content="Sage es un programa de código abierto para
+realizar cálculos en diversas áreas de las matemáticas, desde nivel
+básico hasta investigación. Aquí &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -46,7 +48,9 @@ MathJax.Hub.Config({
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 
-
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script>
+<script>$(function(){sagecell.makeSagecell({inputLocation:'.sage'})});</script>
 
   
 
@@ -87,6 +91,126 @@ MathJax.Hub.Config({
       <div id="content">
         <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/matematicas-discretas/blog/2013/08/05/el-programa-sage/">El programa Sage</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-05T08:55:00-05:00" pubdate data-updated="true">Aug 5<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.sagemath.org">Sage</a> es un programa de código abierto para
+realizar cálculos en diversas áreas de las matemáticas, desde nivel
+básico hasta investigación. Aquí muestro algunos ejemplos para
+familiarizarnos con su uso. Oprime el botón <code>¡Calcular!</code>.</p>
+
+<hr />
+
+<p>Un cálculo trivial:</p>
+
+<div class="sage"><script type="text/x-sage">
+2+2
+</script></div>
+
+<hr />
+
+<p>En el siguiente ejemplo aparece una barra que puedes deslizar para
+cambiar el exponente: </p>
+
+<hr />
+
+<p>Exponenciación:</p>
+
+<div class="sage"><script type="text/x-sage">
+@interact
+def f1(exponente=slider(2,20,1)):
+  k1 = exponente
+  k2 = 2^exponente
+  print "2^%s = %s" % (k1, k2)
+</script></div>
+
+<hr />
+
+<p>Factorización:</p>
+
+<div class="sage"><script type="text/x-sage">
+factor(2013)
+</script></div>
+
+<div class="sage"><script type="text/x-sage">
+factor(x^4 - 30*x^3 - 80*x^2)
+</script></div>
+
+<hr />
+
+<p>Resolución de ecuaciones:</p>
+
+<div class="sage"><script type="text/x-sage">
+x=var('x') 
+solve(x^2+3*x+2==0,x)
+</script></div>
+
+<div class="sage"><script type="text/x-sage">
+a=var('a')      
+solve(a*x^2+3*(a-1)*x+2,x)   
+</script></div>
+
+<hr />
+
+<p>Graficación de funciones de una variable:</p>
+
+<div class="sage"><script type="text/x-sage">
+f=(x-1)*(x-2)*(x-3)     
+plot(f,-1,4)
+</script></div>
+
+<div class="sage"><script type="text/x-sage">
+p1=plot(x,0,1)                         
+p2=plot(x^2,0,1,color="purple")
+p3=plot(x^3,0,1,color="green")
+show(p1+p2+p3)
+</script></div>
+
+<hr />
+
+<p>Graficación de funciones de dos variables (utiliza Java):</p>
+
+<div class="sage"><script type="text/x-sage">
+y=var('y') 
+plot3d(sin(x*y), (x, -pi, pi), (y, -pi, pi))
+</script></div>
+
+<hr />
+
+<p>En <a href="http://sagemath.org/eval.html">esta</a> página se encuentran muchos
+otros ejemplos.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -649,6 +773,10 @@ documento pueden resultar útiles.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/matematicas-discretas/blog/2013/08/05/el-programa-sage/">El programa Sage</a>
+      </li>
+    
+      <li class="post">
         <a href="/matematicas-discretas/blog/2013/08/02/ejercicios-de-conteo/">Ejercicios de conteo</a>
       </li>
     
@@ -662,10 +790,6 @@ documento pueden resultar útiles.</p>
     
       <li class="post">
         <a href="/matematicas-discretas/blog/2013/07/31/reglas-fundamentales-de-conteo/">Reglas fundamentales de conteo</a>
-      </li>
-    
-      <li class="post">
-        <a href="/matematicas-discretas/blog/2013/07/31/conjuntos/">Conjuntos</a>
       </li>
     
   </ul>

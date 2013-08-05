@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conteo | Matemáticas Discretas]]></title>
   <link href="http://rvf0068.github.io/matematicas-discretas/blog/categories/conteo/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/matematicas-discretas/"/>
-  <updated>2013-08-04T22:33:04-05:00</updated>
+  <updated>2013-08-05T10:51:56-05:00</updated>
   <id>http://rvf0068.github.io/matematicas-discretas/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -45,6 +45,195 @@
   <li>¿En cuántas sucesiones de ocho volados se obtienen
   exactamente cinco águilas y tres soles?</li>
 </ol>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Combinaciones]]></title>
+    <link href="http://rvf0068.github.io/matematicas-discretas/blog/2013/08/01/combinaciones/"/>
+    <updated>2013-08-01T20:31:00-05:00</updated>
+    <id>http://rvf0068.github.io/matematicas-discretas/blog/2013/08/01/combinaciones</id>
+    <content type="html"><![CDATA[<p>Ahora consideraremos problemas donde se pide encontrar la cantidad de
+maneras de hacer una selección, pero no importa el orden de los objetos
+seleccionados.</p>
+
+<dl>
+  <dt><strong>Problema 6</strong></dt>
+  <dd>De un grupo de seis personas: Ana, Benjamín, Carlos, Diana,
+Erika y Federico, se quiere escoger un comité de tres personas, donde se
+entiende las tres personas escogidas tendrán las mismas
+responsabilidades. ¿De cuántas maneras se puede escoger el comité?</dd>
+</dl>
+
+<p>En éste caso debemos considera, por ejemplo que las permutaciones ABF,
+BAF, FAB, etc., representan el mismo comité. Vamos a aplicar la
+regla 3 para resolver el problema.</p>
+
+<p>Sea $A$ el conjunto de permutaciones ordenadas de los símbolos A, B, C,
+D, E, F de tamaño 3. Ya sabemos que $|A|=6\cdot 5\cdot 4$. Sea $X$ el
+conjunto de los comités posibles, de modo que lo que queremos encontrar
+es $|X|$. Por cada uno de los elementos $c$ de $X$, sea $A_{c}$ el
+conjunto de todas las permutaciones ordenadas que se pueden formar con
+los elementos de $c$. Por ejemplo, si $c$ es el comité donde están Ana,
+Benjamín y Federico, entonces $A_{c}$ está compuesto de:</p>
+
+<blockquote>
+  <p>ABF, AFB, BAF, BFA, FAB, FBA.</p>
+</blockquote>
+
+<p>Para cada $c\in X$, tenemos que $A_{c}=3!$. Puesto que si $c\ne c’$,
+se tiene que $A_{c}\cap A_{c’}=\emptyset$ y $A$ es la unión de todos
+los conjuntos como los $A_{c}$, tenemos que</p>
+
+<script type="math/tex; mode=display">
+|A_{c}||X|=|A|,
+</script>
+
+<p>de donde $|X|=\frac{6\cdot 5\cdot 4}{3!}=20$. A cada una de las 20
+soluciones se le llama una <em>combinación</em> (sin repetición) de tamaño 3, del
+conjunto formado por A, B, C, D, E, F.</p>
+
+<p>Otra manera de ver el problema anterior, es que hemos encontrado la
+cantidad de subconjuntos de tamaño 3, de un conjunto de 6 elementos. En
+general, la cantidad de subconjuntos de tamaño $k$ de un conjunto de
+$m$ elementos puede obtenerse por el método indicado. Si la denotamos
+con $C_{m,k}$, resulta que:</p>
+
+<script type="math/tex; mode=display">
+C_{m,k}=\frac{P_{m,k}}{k!}=\frac{m!}{(m-k)!k!}.
+</script>
+
+<dl>
+  <dt><strong>Problema 7</strong></dt>
+  <dd>En la preselección del estado de Hidalgo para la olimpiada
+de matemáticas hay 30 alumnos, de donde se escogen 6 para concursar en
+la olimpiada nacional. ¿De cuántas maneras puede hacerse la elección?</dd>
+</dl>
+
+<p>Dado que en el equipo no se distingue un orden, tenemos que hay
+$C_{30,6}$ maneras de escoger los 6 alumnos del equipo. En éste caso,
+conviene observar que es equivalente escoger los 24 alumnos que no van a
+formar parte del equipo, por lo que deberíamos tener que
+$C_{30,6}=C_{30,24}$, lo cual efectivamente sucede, verificando en la
+fórmula.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Permutaciones]]></title>
+    <link href="http://rvf0068.github.io/matematicas-discretas/blog/2013/08/01/permutaciones/"/>
+    <updated>2013-08-01T16:54:00-05:00</updated>
+    <id>http://rvf0068.github.io/matematicas-discretas/blog/2013/08/01/permutaciones</id>
+    <content type="html"><![CDATA[<dl>
+  <dt><strong>Problema 2</strong></dt>
+  <dd>De un grupo de cinco personas: Ana, Benjamín, Carlos, Diana
+y Erika, se quiere escoger una mesa directiva que constará de
+presidente, secretario y tesorero. ¿De cuántas maneras posibles se puede
+hacer la elección (suponiendo que una persona puede ocupar más de un
+cargo)?</dd>
+</dl>
+
+<p>En este caso, aplicamos la regla 5, pues cada uno de los tres
+cargos se puede ocupar de 5 maneras, independientemente de como se
+ocupen los otros. Por lo tanto, hay $5\cdot 5\cdot 5=5^{3}=125$ maneras
+de llenar la mesa directiva.</p>
+
+<p>Consideremos un problema más sencillo, en el que sea factible enunciar
+todas las posibilidades. Supongamos que sólo hay tres personas: Ana,
+Benjamín y Carlos, que sólo hay dos cargos: presidente y secretario, y
+que es posible que los dos cargos recaigan en la misma persona. Si
+representamos, por ejemplo, la mesa directiva donde Carlos es presidente
+y Benjamín es secretario con CB, entonces las $3^{2}$ soluciones son:</p>
+
+<blockquote>
+  <p>AA, BB, CC, AB, AC, BA, BC, CA, CB.</p>
+</blockquote>
+
+<p>a estas las llamamos <em>permutaciones ordenadas (con repetición)</em>, de
+tamaño 2, de las tres letras A, B, C.</p>
+
+<p>En general, la cantidad de permutaciones ordenadas con repetición de un
+conjunto de $m$ elementos de tamaño $k$ es $m^{k}$.</p>
+
+<p>A continuación tenemos un ejemplo de un problema que, aunque en
+principio no habla de permutaciones, se puede plantear en tales
+términos.</p>
+
+<dl>
+  <dt><strong>Problema 5</strong></dt>
+  <dd>¿Cuántos subconjuntos tiene el conjunto $A=\{1,2,3,4,5\}$?.</dd>
+</dl>
+
+<p>Representaremos, por ejemplo, al subconjunto $\{1,3,4\}$ con la
+permutación ordenada con repetición SNSSN, con lo que queremos decir que
+el 1,3,4 SÍ están en el subconjunto y 2,5 NO están. De este modo, el
+conjunto vacío se representa con NNNNN y el conjunto $A$ con SSSSS.
+Obtenemos una correspondencia biyectiva entre el conjunto que queremos
+contar y las permutaciones ordenadas con repetición de tamaño 5 de los
+símbolos S,N. Por lo tanto, el conjunto $A$ tiene $2^{5}$ subconjuntos.
+(En general, un conjunto de $n$ elementos tiene exactamente $2^{n}$
+subconjuntos.)</p>
+
+<p>Ahora consideraremos el caso de permutaciones donde no se permite
+repeticiones.</p>
+
+<dl>
+  <dt><strong>Problema 3</strong></dt>
+  <dd>Supongamos el mismo grupo de cinco personas del
+problema 2, formando la misma mesa directiva. ¿De cuántas
+maneras se puede ocupar la mesa directiva, ahora con la condición de que
+ninguna persona puede ocupar más de un cargo?</dd>
+</dl>
+
+<p>Hay que aplicar la regla 5: primero, el cargo de presidente se puede
+ocupar de 5 maneras. Independientemente de quién sea elegido presidente,
+el cargo de secretario se puede designar de 4 maneras. Finalmente, el
+tesorero puede escogerse de 3 maneras. En total hay $5\cdot 4\cdot 3
+=60$ modos de llenar la mesa directiva con las condiciones dadas.</p>
+
+<p>Nuevamente consideremos un problema más sencillo. Supongamos que sólo
+hay tres personas: Ana, Benjamín y Carlos, que sólo hay dos cargos:
+presidente y secretario, y que no se permiten los dos cargos para la
+misma persona. Las $3\cdot 2$ posibles maneras de formar la mesa
+directiva son:</p>
+
+<blockquote>
+  <p>AB, AC, BA, BC, CA, CB.</p>
+</blockquote>
+
+<p>a estas las llamamos <em>permutaciones ordenadas (sin repetición)</em> de las
+tres letras A, B, C, de 2 elementos.</p>
+
+<dl>
+  <dt><strong>Problema 4</strong></dt>
+  <dd>¿Cuántas permutaciones ordenadas de 4 elementos se pueden
+hacer con las letras A, B, C, D, E, F, G, H, I, J?</dd>
+</dl>
+
+<p>Son 10 letras, la primera se puede escoger de 10 modos, la segunda de 9
+modos, etc., por lo tanto la cantidad de permutaciones ordenadas es
+$10\cdot 9\cdot 8\cdot 7$.</p>
+
+<p>La cantidad de permutaciones ordenadas de tamaño $k$ de un conjunto de
+$m$ elementos será denotada con el símbolo $P_{m,k}$, y es igual a
+$m(m-1)(m-2)\cdots$ hasta tener $k$ factores, es decir:</p>
+
+<script type="math/tex; mode=display">
+P_{m,k}=m(m-1)(m-2)\cdots (m-(k-1)).
+</script>
+
+<p>Esta fórmula se puede escribir mejor usando la definición del
+<em>factorial</em> de $m$:</p>
+
+<script type="math/tex; mode=display">
+m!=1\cdot 2\cdot 3\cdots (m-1)\cdot m,
+</script>
+
+<p>pues entonces:</p>
+
+<script type="math/tex; mode=display">
+P_{m,k}=\frac{m!}{(m-k)!}.
+</script>
 ]]></content>
   </entry>
   
