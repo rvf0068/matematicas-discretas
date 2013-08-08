@@ -51,7 +51,8 @@ MathJax.Hub.Config({
 <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script>
 <script>$(function(){sagecell.makeSagecell({inputLocation:'.sage',
-                                            evalButtonText:'¡Calcular!'})});</script>
+                                            evalButtonText:'¡Calcular!'})});
+</script>
 
   
 
@@ -171,7 +172,7 @@ solve(x^2+3*x+2==0,x)
 
 <div class="sage"><script type="text/x-sage">
 a=var('a')      
-solve(a*x^2+3*(a-1)*x+2,x)   
+solve(a*x^2+3*(a-1)*x+2==0,x)   
 </script></div>
 
 <hr />
