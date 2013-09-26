@@ -31,11 +31,7 @@
         <lastmod>2013-08-07T22:29:01-05:00</lastmod>
     </url>
     <url>
-        <loc>http://rvf0068.github.io/matematicas-discretas/search.html</loc>
-        <lastmod>2013-07-31T18:25:18-05:00</lastmod>
-    </url>
-    <url>
-        <loc>http://rvf0068.github.io/matematicas-discretas/blog/archives/</loc>
+        <loc>http://rvf0068.github.io/matematicas-discretas/</loc>
         <lastmod>2013-08-07T22:29:01-05:00</lastmod>
     </url>
     <url>
@@ -47,7 +43,11 @@
         <lastmod>2013-08-02T14:05:25-05:00</lastmod>
     </url>
     <url>
-        <loc>http://rvf0068.github.io/matematicas-discretas/</loc>
+        <loc>http://rvf0068.github.io/matematicas-discretas/blog/archives/</loc>
         <lastmod>2013-08-07T22:29:01-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://rvf0068.github.io/matematicas-discretas/search.html</loc>
+        <lastmod>2013-07-31T18:25:18-05:00</lastmod>
     </url>
 </urlset>
