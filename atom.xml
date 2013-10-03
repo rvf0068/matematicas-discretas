@@ -4,7 +4,7 @@
   <title><![CDATA[Matemáticas Discretas]]></title>
   <link href="http://rvf0068.github.io/matematicas-discretas/atom.xml" rel="self"/>
   <link href="http://rvf0068.github.io/matematicas-discretas/"/>
-  <updated>2013-09-25T19:32:31-05:00</updated>
+  <updated>2013-10-03T10:56:33-05:00</updated>
   <id>http://rvf0068.github.io/matematicas-discretas/</id>
   <author>
     <name><![CDATA[Rafael Villarroel]]></name>
@@ -12,6 +12,62 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Presentación sobre gráficas]]></title>
+    <link href="http://rvf0068.github.io/matematicas-discretas/blog/2013/10/03/presentacion-sobre-graficas/"/>
+    <updated>2013-10-03T10:48:00-05:00</updated>
+    <id>http://rvf0068.github.io/matematicas-discretas/blog/2013/10/03/presentacion-sobre-graficas</id>
+    <content type="html"><![CDATA[<p>Aquí pueden descargar la presentación de gráficas: <a href="http://rvf0068.github.io/matematicas-discretas/pdfs/graficas.pdf">Presentación</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Otros problemas]]></title>
+    <link href="http://rvf0068.github.io/matematicas-discretas/blog/2013/09/26/otros-problemas/"/>
+    <updated>2013-09-26T18:25:00-05:00</updated>
+    <id>http://rvf0068.github.io/matematicas-discretas/blog/2013/09/26/otros-problemas</id>
+    <content type="html"><![CDATA[<ol>
+  <li>
+    <p>En el torneo de fútbol participan 18 equipos, que juegan todos contra
+todos una vez. ¿Cuántos partidos se juegan en total?</p>
+  </li>
+  <li>
+    <p>¿De cuántas maneras pueden 3 personas repartirse 6 manzanas, 1 pera, 1
+naranja, 1 ciruela y 1 durazno?</p>
+  </li>
+  <li>
+    <p>Hallar la suma de todos los números de 4 cifras que se obtienen
+permutando los dígitos 1,2,3,4.</p>
+  </li>
+  <li>
+    <p>¿De cuántas maneras se pueden dividir 30 personas en 3 equipos
+(iguales) de 10 personas cada uno?</p>
+  </li>
+  <li>
+    <p>¿De cuántas maneras se pueden repartir 10 manzanas <em>distintas</em> a 4 niños?</p>
+  </li>
+  <li>
+    <p>Un circo tiene 5 leones y 4 tigres. ¿De cuántas maneras se puede hacer
+una fila con los 9 animales si un tigre no puede ir detrás de otro
+tigre? (Los leones se consideran distintos entre sí, también los tigres).</p>
+  </li>
+  <li>
+    <p>¿De cuántas maneras se pueden escoger 3 números entre el 1 y el 100,
+inclusive, de modo que su suma sea divisible entre 3?</p>
+  </li>
+  <li>
+    <p>Si hay 3 mexicanos, 3 estadounidenses y 3 franceses, ¿de cuántas
+maneras se pueden poner en fila de modo que no haya dos compatriotas
+juntos? </p>
+  </li>
+  <li>
+    <p>¿En cuántos números de 6 cifras aparecen exactamente tres números
+distintos,  ninguno de ellos igual a cero?</p>
+  </li>
+</ol>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[El programa Sage]]></title>

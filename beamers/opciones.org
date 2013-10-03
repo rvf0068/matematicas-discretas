@@ -1,0 +1,22 @@
+# FORMATO PARA PRESENTACION
+#+latex_class: beamer
+#+startup: beamer
+#+latex_class_options: [spanish,presentation]
+
+# FORMATO PARA ARTICULO
+# #+latex_class: article
+# #+latex_header: \usepackage{beamerarticle}
+
+# FORMATO PARA HANDOUT
+# #+latex_class_options: [spanish,handout]
+# #+latex_header: \usepackage{pgfpages}
+# #+latex_header: \pgfpagesuselayout{4 on 1}[letterpaper,landscape]
+
+#+beamer_color_theme: shark
+#+beamer_inner_theme: chamfered [outline,shadow]
+#+beamer_outer_theme: wuerzburg [glossy,nofootline]
+
+#+latex_header: \usepackage{lxfonts}
+#+latex_header: \usepackage[spanish,mexico]{babel}
+
+#+options: H:2 toc:nil

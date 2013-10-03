@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gráficas | Matemáticas Discretas]]></title>
+  <link href="http://rvf0068.github.io/matematicas-discretas/blog/categories/graficas/atom.xml" rel="self"/>
+  <link href="http://rvf0068.github.io/matematicas-discretas/"/>
+  <updated>2013-10-03T10:56:33-05:00</updated>
+  <id>http://rvf0068.github.io/matematicas-discretas/</id>
+  <author>
+    <name><![CDATA[Rafael Villarroel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Presentación sobre gráficas]]></title>
+    <link href="http://rvf0068.github.io/matematicas-discretas/blog/2013/10/03/presentacion-sobre-graficas/"/>
+    <updated>2013-10-03T10:48:00-05:00</updated>
+    <id>http://rvf0068.github.io/matematicas-discretas/blog/2013/10/03/presentacion-sobre-graficas</id>
+    <content type="html"><![CDATA[<p>Aquí pueden descargar la presentación de gráficas: <a href="/pdfs/graficas.pdf">Presentación</a></p>
+]]></content>
+  </entry>
+  
+</feed>
