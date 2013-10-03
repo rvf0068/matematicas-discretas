@@ -3,7 +3,7 @@ layout: post
 title: "Permutaciones"
 date: 2013-08-01 16:54
 comments: true
-categories: 
+categories: conteo permutaciones
 ---
 
 **Problema 2**

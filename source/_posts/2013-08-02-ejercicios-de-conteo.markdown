@@ -3,7 +3,7 @@ layout: post
 title: "Ejercicios de conteo"
 date: 2013-08-02 14:13
 comments: true
-categories: conteo permutaciones combinaciones
+categories: conteo permutaciones combinaciones problemas
 ---
 
 1. Si se tiene tela de 5 colores distintos, ¿de cuántas maneras se

@@ -3,7 +3,7 @@ layout: post
 title: "Combinaciones"
 date: 2013-08-01 20:31
 comments: true
-categories: 
+categories: conteo combinaciones
 ---
 
 Ahora consideraremos problemas donde se pide encontrar la cantidad de
