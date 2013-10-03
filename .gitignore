@@ -11,3 +11,13 @@ source/_stash
 source/stylesheets/screen.css
 vendor
 node_modules
+/source/examenes/calificaciones.org
+/source/examenes/examen1.aux
+/source/examenes/examen1.log
+/source/examenes/examen1.pdf
+/source/examenes/examen1.tex
+/source/beamers/auto/problemas-conteo.el
+/source/beamers/opciones.org
+/source/beamers/problemas-conteo.org
+/source/beamers/problemas-conteo.pdf
+/source/beamers/problemas-conteo.tex
